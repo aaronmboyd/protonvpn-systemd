@@ -9,7 +9,7 @@ Connection service for ProtonVPN using a `systemd` process.
 # Instructions
 
 ## Create service
-Download and execute the shell script - (you may need to `chmod +x` first to be able to execute)
+[Download and execute the shell script](https://github.com/aaronmboyd/protonvpn-systemd/blob/master/create_protonvpn_service.sh) - (you may need to `chmod +x` first to be able to execute)
 
 ## Reload systemd catalog
 ```
