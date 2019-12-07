@@ -6,9 +6,9 @@ After=network.target
 [Service]
 Type=forking
 User=root
-ExecStart=protonvpn c IS-DE#1 || protonvpn c IS-NL#1 || protonvpn c IS-IL#1
-ExecReload=protonvpn disconnect && protonvpn c IS-DE#1 || protonvpn c IS-NL#1 || protonvpn c IS-IL#1
-ExecStop=protonvpn disconnect
+ExecStart=/usr/local/bin/protonvpn c IS-DE#1 || /usr/local/bin/protonvpn c IS-NL#1 || /usr/local/bin/protonvpn c IS-IL#1
+ExecReload=/usr/local/bin/protonvpn disconnect && /usr/local/bin/protonvpn c IS-DE#1 || /usr/local/bin/protonvpn c IS-NL#1 || /usr/local/bin/protonvpn c IS-IL#1
+ExecStop=/usr/local/bin/protonvpn disconnect
 Restart=always
 KillMode=mixed
 EOF
