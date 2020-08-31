@@ -10,8 +10,8 @@ Wants=network-online.target
 [Service]
 Type=forking
 Environment=SUDO_USER=boyd
-ExecStart=/usr/local/bin/protonvpn c IS-DE#1
-ExecReload=/usr/local/bin/protonvpn c IS-DE#1
+ExecStart=/usr/local/bin/protonvpn c --cc DE
+ExecReload=/usr/local/bin/protonvpn c --cc DE
 ExecStop=/usr/local/bin/protonvpn disconnect
 Restart=always
 
