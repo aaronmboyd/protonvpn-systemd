@@ -1,5 +1,5 @@
 # Create file protonvpn.service
-# Make sure you replace the Environment variable with the 
+# Make sure you replace the Environment variable SUDO_USER with the 
 # username where you installed and first called "protonvpn init"
 sudo tee /etc/systemd/system/protonvpn.service <<EOF
 [Unit]
@@ -9,7 +9,7 @@ Wants=network-online.target
 
 [Service]
 Type=forking
-Environment=SUDO_USER=boyd
+Environment=SUDO_USER=<your username>
 ExecStart=/usr/local/bin/protonvpn c --cc DE
 ExecReload=/usr/local/bin/protonvpn c --cc DE
 ExecStop=/usr/local/bin/protonvpn disconnect
