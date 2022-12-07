@@ -9,11 +9,10 @@ Wants=network-online.target
 
 [Service]
 Type=forking
-Environment=SUDO_USER=<your username>
-ExecStart=/usr/local/bin/protonvpn c --cc DE
-ExecReload=/usr/local/bin/protonvpn c --cc DE
-ExecStop=/usr/local/bin/protonvpn disconnect
-Restart=always
+Environment=SUDO_USER=<user>
+ExecStart=/usr/bin/protonvpn-cli last-connect  
+ExecReload=/usr/bin/protonvpn-cli disconnect && /usr/bin/protonvpn-cli last-connect  
+ExecStop=/usr/bin/protonvpn-cli disconnect*
 
 [Install]
 WantedBy=multi-user.target
